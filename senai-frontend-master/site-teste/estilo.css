@@ -1,0 +1,67 @@
+li,p,h1
+ {
+    color: #228b22;
+    width: 500px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+ }
+ #meu-id
+ { 
+     background-color: black;
+     color: blanchedalmond;
+      }
+
+.minha-class
+{
+    background-color: blanchedalmond;
+}  
+.fundo-vermelho
+{
+    background-color: brown;
+    color: :black;
+}    
+
+.fundo-vermelho:hover
+{
+    background-color:chartreuse;
+    color: blue;
+}   
+html {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
+      background-color: gold;
+
+    
+}
+h1 {
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 0px white;
+    
+}
+body{
+    width: 600px;
+    margin: 0 auto;
+    background-color:sienna;
+  
+
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+p,li {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    
+}
