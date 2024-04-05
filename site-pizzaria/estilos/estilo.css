@@ -14,6 +14,8 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
 }
 
 .content{
@@ -24,7 +26,7 @@ html {
     background-color: #1f1e1f;
     position: fixed;
     align-items: center;
-    font-family: "Roboto", sans-serif;
+    
 }
 
 .logo {
@@ -91,6 +93,7 @@ html {
     font-size: 6rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    
 }
 
 .indie-flower-regular {
@@ -104,6 +107,7 @@ html {
     font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 3rem;
+    
 }
 
 .first-section .conteudo-principal{
@@ -172,6 +176,7 @@ html {
     font-size: 6rem;
     margin-bottom: 1rem;
     font-family:"Indie Flower",cursive;
+    
 }
 .contentsobre{
     display: flex;
@@ -198,11 +203,12 @@ html {
     color: #e6e6e6;
     text-transform: uppercase;
     margin-top: 2rem;
+    
 }
 .itens-cardapio {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -271,4 +277,78 @@ html {
     color: white;
 
 }
+/* section contatos*/
+.contatos{
+    width: 100%;
+    background-color: #1f1e1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
 
+}
+.contatos h3{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    font-family: 'Indie Flower'; cursive;
+}
+.contatos .contatos-secao{
+    display: flex;
+    width: 650px;
+    justify-content: space-between;
+    font-size: 2rem;
+
+}
+.contatos i{
+    margin-right: 1rem;
+}
+.contatos div{
+    cursor: pointer;
+}
+.contatos .contatos-secao div:hover{
+    color: #ffc506;
+
+}
+footer{
+    height: 35px;
+    background-color: #000000;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:1200px) {
+    .itens-cardapio{
+        width: 90%;
+    }
+    .sobre-nos{
+        width: 400px;
+        margin-left: -2px;
+    }
+    .main{
+        display: block;
+    }
+    
+}
+@media (max-width:980px) {
+    html{
+        font-size: 50%;
+    }
+
+}
+@media (max-width:870px) {
+  .content .list-menu{
+      display: none;
+
+  }
+  .one, .two, .three{
+      width: 100%;
+      height: 4px;
+      color: white;
+      margin: 6px auto;
+  }
+    }
