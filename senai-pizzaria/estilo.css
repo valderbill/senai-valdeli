@@ -1,0 +1,38 @@
+html{
+    background-color: blue;
+    color:white;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 10px;
+    display: flex;
+    height: 100%;
+    text-align: center;
+  
+
+}
+body{
+    background-color: #1F1F1F;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: none;
+    width: 300px;
+    padding: 30px;
+}
+a {
+    background-color: white;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    outline: none;
+}
+a :hover{
+    background-color: #C5F82A;
+    color:black;
+
+}
+p{
+    color: yellowgreen;
+}
