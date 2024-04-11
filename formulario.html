@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadatro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<div class="container mt-5">
+<div class="container-md mt-2">
+    <h2>Fomrulário de Cadastro</h2>
+    <div class="row">
+    </div class="mb-3 col-12">
+    
+        <div class="mb-3 mt-3">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite o email" name="email">
+        </div>
+       
+            <div class="col-sm-6 col-md-5 col-lg-4">
+                <label>Sexo:</label>
+                <div class="mb-3">
+                    <input type="radio" class="form-check-input" id="masculino" name="sexo" value="masculino">
+                    <label class="form-check-label" for="masculino">Masculino</label>
+                    <input type="radio" class="form-check-input" id="feminino" name="sexo" value="feminino">
+                    <label class="form-check-label" for="feminino">Feminino</label>
+                    <input type="radio" class="form-check-input" id="outros" name="sexo" value="outros">
+                    <label class="form-check-label" for="outros">outros</label>
+                </div>
+            </div>
+            <div class="mb-3 col-sm-6 col-md-4">
+                <label for="nome">Data de Nascimento:</label>
+                <input type="date" class="form-control" id="dtNascimento" name="dtNascimento">
+            </div>
+            <div class="mb-3 col-sm-6 col-md-4" >
+                <label for="nome">Estado Civil:</label>
+                <select class="form-select" id="estado-civil" name="estado-civil">
+                    <option>Selecion</option>
+                    <option>Solteiro</option>
+                    <option>Casado</option>
+                    <option>Separado</option>
+                </select>
+            </div>
+            <div class="mb-3 col-sm-6 col-md-4">
+                <label for="nome">Escolaridade:</label>
+                <select class="form-select" id="escolaridade" name="escolaridade">
+                    <option>Selecion</option>
+                    <option>Fundamental</option>
+                    <option>Médio</option>
+                    <option>Superior</option>
+                </select>
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="pwd">Senha:</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite a senha" name="senha">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="pwd">Confirmar Senha:</label>
+                <input type="password" class="form-control" id="confirmar" placeholder="Confirme a senha"
+                    name="confirmar">
+            </div>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary float-end" id="enviar">Enviar</button>
+    
+</div>
+<script>
+    document.querySelector("#enviar").addEventListener("click",validarForm);
+    function validarForm(){
+       let nome = document.getElementById("nome");
+       if (nome.value == '') {
+           nome.style.border = '1px solid red';           
+       }  else{
+           nome.style.border = '';
+       }
+       let email = document.getElementById("email");
+       if (email.value == '') {
+           email.style.border = '1px solid red';
+           
+       }else{
+           email.style.border = '';
+       }
+       let dtNascimento = document.getElementById("dtNascimento");
+       if (dtNascimento.value == '') {
+           dtNascimento.style.border = '1px solid red';
+                      
+       }else{
+           dtNascimento.style.border = '';
+       }
+       
+       
+       
+    }
+</script>
+</body>
+</html>
