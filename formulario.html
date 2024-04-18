@@ -8,13 +8,24 @@
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+function desativado(){
+    var str = document.getElementById('txt').value;
+  
+  if(document.getElementById(str))
+    console.log(str + ' existe.');
+  else
+    console.log(str + ' ñ existe');
+
+}
 <div class="container-md mt-3">
     <h2>Formulário Cadastro</h2>
     <div class="row">
         <div class="col-12 ">
-           <div class="form-check form-switch float-end">
-               <input class="form-check-input"type="checkbox" id="darkMode" checked>
+           <div class="form-check form-switch float-end">dark
+               <input class="form-check-input"type="checkbox" id="darkMode" checked onclick="desativado('')">
+
                <label class="form-check-label" for="darkMode">Dark Mode</label>
+            </script>
 
            </div>
         </div>

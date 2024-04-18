@@ -1,0 +1,1 @@
+const darkMode = document.querySelector('#darMode');
