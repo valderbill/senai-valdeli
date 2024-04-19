@@ -1,1 +1,5 @@
-const darkMode = document.querySelector('#darMode');
+<script>
+function displayResult() {
+  document.getElementById("darkMode").innerHTML = "green";
+}
+</script>
