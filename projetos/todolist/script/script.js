@@ -32,6 +32,7 @@ function gravar() {
 }
 
 function ataulizarTabela() {
+    localStorage.setItem("lsItem",JSON.stringify(lsItem));
     let tbody = '';
     if (lsItem.length > 0) {
         let i = 0;
@@ -68,3 +69,11 @@ function apagar() {
         alert("Necessário selecionar algum item.")
     }
 }
+
+lsItem = JSON.parse(localStorage.getItem("lsItem"));
+if(lsItem == null){
+    localStorage.setItem("lsItem","[]");
+    lsItem = [];
+}
+
+ataulizarTabela();
