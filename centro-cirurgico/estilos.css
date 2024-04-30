@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg, blue,cyan, yellow, gold);
+
+}
+div{
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 120px;
+    border-radius: 50%;
+    color: #ffff;
+}
+input{
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 15px;
+}
+button{
+    background-color: gold;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: chartreuse;
+}
