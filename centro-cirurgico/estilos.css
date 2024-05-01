@@ -28,7 +28,9 @@ button{
     border-radius: 15px;
     font-size: 20px;
     cursor: pointer;
+    
 }
 button:hover{
     background-color: chartreuse;
+    
 }

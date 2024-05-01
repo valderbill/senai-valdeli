@@ -43,12 +43,12 @@ function ataulizarTabela() {
     if (lsItem.length > 0) {
         let i = 0;
         for (const obj of lsItem) {
-            if (obj.item != ""){
-            tbody += `<tr onclick='editar(${i})'><td class="${tpStatus[obj.status]}">${obj.item}</td></tr>`;
-        }
-            i++;
+            if (obj.item != "") {
+                tbody += `<tr onclick='editar(${i})'><td class="${tpStatus[obj.status]}">${obj.item}</td></tr>`;
             }
-        
+            i++;
+        }
+
     } else {
         tbody = `<tr><td>Lista vazia</td></tr>`;
     }
@@ -74,9 +74,9 @@ function apagar() {
     let indice = document.getElementById('indice').value;
     let _lineNumber = document.getElementById('_lineNumber').value;
     if (indice != "") {
-        deleteRow(_lineNumber).then(() =>{                           
-        lsItem.splice(indice, 1);
-        ataulizarTabela();
+        deleteRow(_lineNumber).then(() => {
+            lsItem.splice(indice, 1);
+            ataulizarTabela();
 
         });
         limparForm();
