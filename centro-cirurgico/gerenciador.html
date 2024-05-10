@@ -16,6 +16,7 @@
         <h1>Gerenciar Painel dos Pacientes no Centro Cirúrgico</h1>
         <div class="row">
             <input type="hidden" id="indice" value=""> 
+            <input type="hidden" id="_lineNumber" value="">
             <div class="col-md-6">
                 <label for="nome" class="form-label">Nome do Paciente:</label>
                 <input type="text" id="nome" name="nome" class="form-control">
@@ -56,9 +57,9 @@
 
         <div class="row">
 
-            <button onclick="novo" class="btn btn-secondary col-md-1 me-4 float-end" id="bt-novo"> Novo </button>
-            <button onclick="gravar" class="btn btn-primary col-md-1 me-4 float-end" id="bt-gravar"> Gravar</button>
-            <button onclick="apagar" class="btn btn-danger col-md-1 me-4 float-end" id="bt-apagar"> Apagar </button>
+            <button class="btn btn-secondary col-md-1 me-4 float-end" id="bt-novo">Novo </button>
+            <button class="btn btn-primary col-md-1 me-4 float-end" id="bt-gravar">Gravar</button>
+            <button class="btn btn-danger col-md-1 me-4 float-end" id="bt-apagar">Apagar </button>
         </div>
         <table class="table">
             <thead>
@@ -76,9 +77,8 @@
             </tbody>
             </table>
     </div>
-    <script src="/centro-cirurgico/script-gerenciador.js"></script>
+    <script src="script-gerenciador.js"></script>
 
 </body>
 
 </html>
-

@@ -13,18 +13,28 @@ function gravar() {
     obj.inCirurgia = document.getElementById("inCirurgia").value;
     obj.fimCirurgia = document.getElementById("fimCirurgia").value;
     obj.saidaPrevista = document.getElementById("saidaPrevista").value;
-    
+
     lista.push(obj);
     atualizarTabela();
 }
 
+
 function atualizarTabela() {
     let tbody = "";
     for (const pessoa of lista) {
-        tbody += `<tr><td>${pessoa.nome}</td><td>${pessoa.status}</td><td>${pessoa.local}</td><td>${pessoa.inPrevisto}</td><td>${pessoa.inCirurgia}</td><td>${pessoa.fimCirurgia}</td><td>${pessoa.saidaPrevista}</td></tr>`;
+        tbody += `<tr><td>${pessoa.nome}</td>
+        <td>${pessoa.status}</td>
+        <td>${pessoa.local}</td>
+        <td>${pessoa.inPrevisto}</td>
+        <td>${pessoa.inCirurgia}</td>
+        <td>${pessoa.fimCirurgia}</td><td>${pessoa.saidaPrevista}</td>
+        </tr>`;
+
     }
     document.getElementById("tbody").innerHTML = tbody;
 }
+
+
 
 function apagar() {
     lista = [];
@@ -44,4 +54,12 @@ function novo() {
     document.getElementById("inCirurgia").value = "";
     document.getElementById("fimCirurgia").value = "";
     document.getElementById("saidaPrevista").value = "";
+}
+function editar() {
+    obj = lista[obj];
+    document.getElementById('nome').value;
+    document.getElementById('status').value;
+    document.getElementById('local').value;
+    
+    
 }
