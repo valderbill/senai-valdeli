@@ -3,6 +3,11 @@ document.getElementById("bt-apagar").addEventListener("click", apagar);
 document.getElementById("bt-novo").addEventListener("click", novo);
 
 let lista = [];
+let tpStatus = {
+    "Pré-Operatório": "text-bg-info",
+    "Transferido": "text-bg-success",
+    "Em recuperação": "text-bg-danger"
+}
 
 function gravar() {
     let obj = {};
@@ -15,8 +20,10 @@ function gravar() {
     obj.saidaPrevista = document.getElementById("saidaPrevista").value;
 
     let indice = document.getElementById("indice").value;
+      //obj.status = pessoa;
 
     if (indice == "") {
+       
         lista.push(obj);
     } else {
         lista[indice] = obj;
@@ -31,12 +38,14 @@ function atualizarTabela() {
     let tbody = "";
     let i = 0;
     for (const pessoa of lista) {
-        tbody += `<tr onclick="editar(${i})"><td>${pessoa.nome}</td>
-        <td>${pessoa.status}</td>
+        tbody += `<tr onclick="editar(${i})"><td >${pessoa.nome}</td>
+        
+        <td class="${tpStatus[pessoa.status]}">${pessoa.status}</td>
         <td>${pessoa.local}</td>
         <td>${pessoa.inPrevisto}</td>
         <td>${pessoa.inCirurgia}</td>
-        <td>${pessoa.fimCirurgia}</td><td>${pessoa.saidaPrevista}</td>
+        <td>${pessoa.fimCirurgia}</td>
+        <td>${pessoa.saidaPrevista}</td>
         </tr>`;
         i++;
     }
@@ -86,3 +95,42 @@ function apagar() {
         alert("selecione algum paciente")
     }
 }
+
+async function getData() {
+    const response = await fetch("https://api.zerosheets.com/v1/chs");
+    const data = await response.json();
+    
+    return data;
+}
+async function createRow(payload) {
+   
+    const response = await fetch("https://api.zerosheets.com/v1/chs", {
+      method: "POST",
+      body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+  
+    return data;
+}
+async function patchRow(lineNumber, payload) {
+   
+    const url = "https://api.zerosheets.com/v1/chs/" + lineNumber;
+    const response = await fetch(url, {
+      method: "PATCH",
+      body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+    
+   
+    return data;
+}
+async function deleteRow(lineNumber) {
+    const url = "https://api.zerosheets.com/v1/chs/" + lineNumber; 
+    await fetch(url, {
+        method: "DELETE"
+    });
+}
+getData().then( (ls) => {
+    lista = ls;
+    atualizarTabela();
+} );
