@@ -21,17 +21,19 @@ function gravar() {
 
 function atualizarTabela() {
     let tbody = "";
+    let i = 0;
     for (const pessoa of lista) {
-        tbody += `<tr><td>${pessoa.nome}</td>
+        tbody += `<tr onclick="editar(${i})"><td>${pessoa.nome}</td>
         <td>${pessoa.status}</td>
         <td>${pessoa.local}</td>
         <td>${pessoa.inPrevisto}</td>
         <td>${pessoa.inCirurgia}</td>
         <td>${pessoa.fimCirurgia}</td><td>${pessoa.saidaPrevista}</td>
         </tr>`;
-
+        i++;
     }
     document.getElementById("tbody").innerHTML = tbody;
+    
 }
 
 
@@ -55,10 +57,10 @@ function novo() {
     document.getElementById("fimCirurgia").value = "";
     document.getElementById("saidaPrevista").value = "";
 }
-function editar() {
-    obj = lista[obj];
-    document.getElementById('nome').value;
-    document.getElementById('status').value;
+function editar(i) {
+    obj = lista[i];
+    document.getElementById('nome').value = obj.nome;
+    document.getElementById('status').value = obj.status;
     document.getElementById('local').value;
     
     
