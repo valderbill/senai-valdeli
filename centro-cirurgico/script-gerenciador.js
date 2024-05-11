@@ -14,7 +14,15 @@ function gravar() {
     obj.fimCirurgia = document.getElementById("fimCirurgia").value;
     obj.saidaPrevista = document.getElementById("saidaPrevista").value;
 
-    lista.push(obj);
+    let indice = document.getElementById("indice").value;
+
+    if (indice == "") {
+        lista.push(obj);
+    } else {
+        lista[indice] = obj;
+    }
+
+
     atualizarTabela();
 }
 
@@ -33,7 +41,7 @@ function atualizarTabela() {
         i++;
     }
     document.getElementById("tbody").innerHTML = tbody;
-    
+
 }
 
 
@@ -56,12 +64,25 @@ function novo() {
     document.getElementById("inCirurgia").value = "";
     document.getElementById("fimCirurgia").value = "";
     document.getElementById("saidaPrevista").value = "";
+    document.getElementById('indice').value = "";
 }
 function editar(i) {
+
     obj = lista[i];
+    document.getElementById('indice').value = i;
     document.getElementById('nome').value = obj.nome;
     document.getElementById('status').value = obj.status;
     document.getElementById('local').value;
-    
-    
+}
+
+function apagar() {
+    let indice = document.getElementById('indice').value;
+    if (indice != "") {
+        lista.splice(indice, 1);
+        atualizarTabela();
+        novo();
+    }
+    else {
+        alert("selecione algum paciente")
+    }
 }
