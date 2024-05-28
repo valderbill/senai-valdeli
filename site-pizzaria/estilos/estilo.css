@@ -476,3 +476,7 @@ footer {
 .tela-carrinho .bi{
     cursor: pointer;
 }
+.itens-cardapio .info button.selecionado{
+    color: #ffffff;
+    background-color: #333333;
+}
