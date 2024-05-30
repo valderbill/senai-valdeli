@@ -111,7 +111,6 @@ html {
     display: flex;
     justify-content: space-between;
 }
-/* Sobre Nós */
 .img-sapatos img{
     width: 400px;
     height: 400px;
@@ -177,20 +176,19 @@ html {
     margin-bottom: 1rem;
 }
 .itens-lançamento .info h4{
-    font-size: 1.4rem;
+    font-size: 2.8rem;
     text-transform: uppercase;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1.6rem;
     display: grid; 
     justify-content: center;
     align-items: center;
     grid-template-columns: 150px 150px;
-    margin-left: 6rem
+    margin-left: 20rem
 }
 .itens-lançamento .info h4 span{
-    color: #5e5252;
+    color: #f70707;
     margin-left: 1.5rem;
-    text-decoration: underline;
-    font-weight: 800;
+    font-weight: 850;
 }
 .itens-lançamento .info button{
     width: 200px;
@@ -207,7 +205,6 @@ html {
     color: white;
 
 }
-/* section contatos*/
 .contatos{
     width: 100%;
     background-color: #1f1e1f;
