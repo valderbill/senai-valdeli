@@ -223,7 +223,7 @@ html {
 .contatos h3{
     font-size: 6rem;
     margin-bottom: 3rem;
-    font-family: 'Indie Flower'; cursive;
+    font-family: 'Indie Flower', cursive;
 }
 .contatos .contatos-secao{
     display: flex;
