@@ -22,7 +22,7 @@
                 <li><a href="#contatos">Contatos</a></li>
                 <li><a href=""><i class="bi bi-instagram"></i></a></li>
                 <li><a href=""><i class="bi bi-facebook"></i></a></li>
-                <li><a href=""><i class="bi bi-cart2"></i></a></li>
+                <li class="compras"><a href=""><i class="bi bi-cart2"></i></a></li>
             </ul>
             <div class="menu-toggle">
                 <div class="one"></div>
@@ -129,8 +129,26 @@
         </div>
     </div>
     </section>
-   
-  <script src="scripts.js"></script>
+    <section class="tela-carrinho ocultar-tela-carrinho">
+        <h2>Lista de Compra</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Detalhe</th>
+                    <th>QT</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <p id='total-pedido'></p>
+        <button class="continuar">Continar Comprando</button>
+        <button class="enviar">Enviar Pedido</button>
+    </section>
+    <script src="scripts/sapatos.js"></script>
+    <script src="scripts/scripts.js"></script>  
+  
 </body>
 
 </html>
