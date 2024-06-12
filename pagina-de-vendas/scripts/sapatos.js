@@ -52,6 +52,6 @@ let sapatos = [
         dsImg: "Sapato Social Confort Azul",
         nome: "Confort Azul",
         sapato: 139.00
-    }
+    },
 ]
 

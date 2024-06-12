@@ -28,16 +28,12 @@ let telaCarrinho = document.querySelector('.tela-carrinho');
 let continuar = document.querySelector('.continuar');
 
 continuar.addEventListener('click', () => {
-    alert(2)
     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
 });
 
 let compras = document.querySelector('.compras');
-
 compras.addEventListener("click", () => {
-    alert(1)
-    telaCarrinho.classList.toggle('ocultar-tela-carrinho');    
-    menuToggle.click(); // fechar menu versão mobile
+    telaCarrinho.classList.toggle('ocultar-tela-carrinho');
 });
 
 let lsPedido = document.querySelectorAll('.pedir');
